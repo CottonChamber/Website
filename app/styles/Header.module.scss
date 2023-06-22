@@ -1,0 +1,405 @@
+// DESKTOP
+.header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 158px;
+  z-index: 10;
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: inherit;
+    width: 100%;
+    background-color: #f9f6f2;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      background-color: rgba(0, 0, 0, 0.2);
+      width: 100%;
+      height: 1px;
+    }
+  }
+}
+
+.container {
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: calc(100% - 8rem);
+  max-width: 1400px;
+  padding: 0.75rem 0 0.5rem;
+  background-color: #f9f6f2;
+}
+
+.menu_button {
+  display: none;
+}
+
+.pages_menu {
+  display: flex;
+  margin-bottom: 1.1rem;
+
+  li {
+    a {
+      font-size: 18px;
+      font-weight: 500;
+      transition: all 0.15s ease;
+    }
+    &:hover {
+      a {
+        color: #882e4c;
+      }
+    }
+  }
+
+  li:nth-child(2) {
+    margin: 0 25px 0 25px;
+  }
+}
+
+.logo {
+  position: relative;
+  right: 5.9%;
+  width: 138px;
+  height: 138px;
+
+  a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    img {
+      object-fit: contain;
+    }
+  }
+}
+
+.socials_menu {
+  display: flex;
+  margin-bottom: 0.71rem;
+  user-select: none;
+
+  li {
+    cursor: pointer;
+
+    a,
+    svg {
+      position: relative;
+      transition: all 0.175s ease;
+    }
+
+    &:hover {
+      a,
+      svg {
+        color: #882e4c;
+      }
+    }
+  }
+
+  li:nth-child(1) {
+    font-size: 21px;
+
+    a,
+    svg {
+      top: 0.5px;
+    }
+  }
+
+  li:nth-child(2) {
+    margin: 0 15px 0 12.5px;
+
+    a {
+      font-size: 22px;
+    }
+  }
+
+  li:nth-child(3) {
+    font-size: 24px;
+
+    a,
+    svg {
+      top: -1px;
+    }
+  }
+}
+
+.socials_options {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 110%;
+  right: 0;
+  padding: 1rem 2rem 1rem 1.5rem;
+  border-radius: 10px;
+  background-color: #f9f6f2;
+  border: 3px solid #181818;
+  box-shadow: -6px 6px 0px #181818;
+  animation: scaleUp 0.175s ease forwards;
+
+  label {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  label:nth-child(3) {
+    padding-top: 0.5rem;
+  }
+
+  a {
+    transition: all 0.15s ease;
+
+    &:hover {
+      color: #882e4c;
+    }
+  }
+
+  .close_button {
+    cursor: pointer;
+    position: absolute;
+    right: 0.6rem;
+    top: 0.6rem;
+
+    svg {
+      font-size: 18px;
+      transition: all 0.2s ease;
+    }
+
+    &:hover {
+      svg {
+        color: #882e4c;
+      }
+    }
+  }
+}
+
+// TABLET
+@media (max-width: 1100px) and (min-width: 769px) {
+  .header {
+    height: 117px;
+  }
+
+  .container {
+    width: calc(100% - 5rem);
+    padding: 0.25rem 0 0.5rem;
+  }
+
+  .pages_menu {
+    margin-bottom: 0.81rem;
+
+    li {
+      a {
+        font-size: 16px;
+      }
+    }
+
+    li:nth-child(2) {
+      margin: 0 15px 0 15px;
+    }
+  }
+
+  .logo {
+    right: 8%;
+    width: 105px;
+    height: 105px;
+  }
+
+  .socials_menu {
+    margin-bottom: 0.51rem;
+
+    li:nth-child(1) {
+      font-size: 17px;
+    }
+
+    li:nth-child(2) {
+      margin: 0 12.5px 0 10px;
+
+      a {
+        font-size: 18px;
+      }
+    }
+
+    li:nth-child(3) {
+      font-size: 20px;
+    }
+  }
+
+  .socials_options {
+    top: 110%;
+    right: 0;
+    padding: 0.75rem 1.75rem 0.75rem 1.25rem;
+    box-shadow: -5px 5px 0px #181818;
+
+    label {
+      font-size: 10px;
+      padding-bottom: 0.1rem;
+    }
+    a {
+      font-size: 14px;
+    }
+
+    .close_button {
+      right: 0.5rem;
+      top: 0.5rem;
+
+      svg {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+// MOBILE
+@media (max-width: 768px) {
+  .header {
+    height: 96px;
+  }
+
+  .container {
+    width: calc(100% - 3rem);
+    padding: 0.5rem 0;
+  }
+
+  .menu_button {
+    cursor: pointer;
+    position: relative;
+    display: grid;
+    place-items: center;
+    margin-bottom: 0.9rem;
+    user-select: none;
+
+    // Makes the button easily clickable
+    &::after {
+      content: "";
+      position: absolute;
+      padding: 0.6rem 1.2rem;
+      left: -0.175rem;
+      bottom: -0.3rem;
+    }
+
+    .line_1,
+    .line_2 {
+      position: absolute;
+      left: 0;
+      height: 3px;
+      background-color: #181818;
+      border-radius: 3px;
+    }
+
+    .line_1 {
+      top: -13px;
+      width: 35px;
+      margin-bottom: 6px;
+    }
+
+    .line_2 {
+      top: -3px;
+      width: 30px;
+    }
+  }
+
+  .pages_menu {
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    top: 100%;
+    left: -1.5rem;
+    width: 100vw;
+    background-color: #f9f6f2;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-width: 1px 0;
+    padding: 1.5rem;
+    //for animation
+    height: 0px;
+    opacity: 0;
+
+    li {
+      a {
+        font-size: 14px;
+      }
+      &:hover {
+        a {
+          color: #181818;
+        }
+      }
+    }
+
+    li:nth-child(2) {
+      margin: 0;
+      padding: 0.75rem 0;
+    }
+  }
+
+  .logo {
+    right: -5.5%;
+    width: 80px;
+    height: 80px;
+  }
+
+  .socials_menu {
+    margin-bottom: 0.1rem;
+
+    li:nth-child(1) {
+      font-size: 16px;
+    }
+
+    li:nth-child(2) {
+      margin: 0 10px 0 7.5px;
+
+      a {
+        font-size: 17px;
+      }
+    }
+
+    li:nth-child(3) {
+      font-size: 19px;
+    }
+  }
+
+  .socials_options {
+    padding: 0.75rem 1.5rem 0.75rem 1rem;
+    border-radius: 8px;
+    border: 2.5px solid #181818;
+
+    label {
+      font-size: 8px;
+    }
+
+    a {
+      font-size: 12px;
+    }
+
+    .close_button {
+      right: 0.5rem;
+      top: 0.4rem;
+
+      svg {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+// MOBILE SMALL
+@media (max-width: 500px) {
+  .logo {
+    right: -11%;
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

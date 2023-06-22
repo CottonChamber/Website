@@ -1,0 +1,105 @@
+.message_container {
+  position: fixed;
+  display: grid;
+  place-items: center;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 15;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.message {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: max-content;
+  background-color: #f9f6f2;
+  border: 3px solid #181818;
+  border-radius: 10px;
+  box-shadow: -6px 6px 0px #181818;
+  padding: 1rem 3.5rem 1rem 2rem;
+
+  svg {
+    width: 20px;
+    height: 20px;
+    color: #882e4c;
+  }
+
+  p {
+    font-weight: 600;
+    font-size: 16px;
+    padding-left: 0.5rem;
+  }
+
+  .close_button {
+    cursor: pointer;
+    position: absolute;
+    right: 0.6rem;
+    top: 0.6rem;
+
+    svg {
+      color: #181818;
+      font-size: 18px;
+      transition: all 0.2s ease;
+    }
+
+    &:hover {
+      svg {
+        color: #882e4c;
+      }
+    }
+  }
+}
+
+// TABLET
+@media (max-width: 1100px) and (min-width: 769px) {
+  .message {
+    box-shadow: -5px 5px 0px #181818;
+    padding: 1rem 3rem 1rem 1.5rem;
+
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+
+    .close_button {
+      svg {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+// MOBILE
+@media (max-width: 768px) {
+  .message {
+    border-radius: 8px;
+    border: 2.5px solid #181818;
+    padding: 0.85rem 2.5rem 0.85rem 1rem;
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    p {
+      font-size: 12px;
+      padding-left: 0.35rem;
+    }
+
+    .close_button {
+      right: 0.5rem;
+      top: 0.4rem;
+
+      svg {
+        font-size: 14px;
+      }
+    }
+  }
+}
