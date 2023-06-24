@@ -41,7 +41,7 @@ const Item = ({ src, title, description }) => {
             <Image
               src={src}
               alt="Cotton Chamber Clothing"
-              sizes="(min-width: 1100px) 100px, (max-width: 1100px) 100px, 100px"
+              sizes="(min-width: 1100px) 100px, (min-width: 769px) and (max-width: 1099px) 75px, (max-width: 768px) 67.5px"
               fill
             />
           </div>

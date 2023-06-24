@@ -42,8 +42,8 @@ const DressImage = () => {
   const rotateOnScroll = () => {
     const scrollPosition = window.pageYOffset;
 
-    if(circleRef.current){
-        circleRef.current.style.transform = `rotateZ(${scrollPosition * 0.09}deg)`;
+    if (circleRef.current) {
+      circleRef.current.style.transform = `rotateZ(${scrollPosition * 0.1}deg)`;
     }
   };
 
@@ -57,7 +57,7 @@ const DressImage = () => {
         <Image
           src="/landing/how-to-bg-circle.svg"
           alt="Circled Pattern Background Image"
-          sizes="(min-width: 1100px) 250px, (max-width: 1100px) 250px, 250px"
+          sizes="(min-width: 1100px) 250px, (min-width: 769px) and (max-width: 1099px) 175px, (max-width: 768px) 130px"
           fill
         />
       </div>
@@ -66,7 +66,7 @@ const DressImage = () => {
         <Image
           src="/landing/dress.png"
           alt="Dress Manufactured By Cotton Chamber"
-          sizes="(min-width: 1100px) 138.69px, (max-width: 1100px) 138.69px, 138.69px"
+          sizes="(min-width: 1100px) 138.69px, (min-width: 769px) and (max-width: 1099px) 120px, (max-width: 768px) 80px"
           fill
         />
       </div>

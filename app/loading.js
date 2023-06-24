@@ -11,7 +11,7 @@ const Loading = () => {
             src="/logo.png"
             alt="Cotton Chamber Clothing Manufacturing Company Logo"
             fill
-            sizes="(min-width: 1100px) 138px, (max-width: 1100px) 138px, 138px"
+            sizes="(min-width: 1100px) 138px, (max-width: 1100px) 105px"
             draggable={false}
           />
         </div>

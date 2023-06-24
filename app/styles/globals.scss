@@ -90,6 +90,37 @@ textarea {
   }
 }
 
+// MOBILE
+@media (max-width: 768px) {
+  .app-container {
+    padding: 0 1.5rem;
+  }
+
+  button {
+    font-size: 14px;
+    border-radius: 7.5px;
+    box-shadow: -3.5px 3.5px 0px #181818;
+
+    a,
+    span {
+      padding: 0.7rem 1.25rem;
+    }
+  }
+}
+
+// MOBILE SMALL
+@media (max-width: 330px) {
+  button {
+    font-size: 12px;
+    border-radius: 6px;
+
+    a,
+    span {
+      padding: 0.65rem 1.1rem;
+    }
+  }
+}
+
 @keyframes closeLine1 {
   from {
     top: -13px;

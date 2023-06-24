@@ -26,7 +26,7 @@ const Service = ({ title, description, src }) => {
           src={src}
           fill
           alt={`${title} Service By Cotton Chamber`}
-          sizes="(min-width: 1100px) 500px, (max-width: 1100px) 500px, 500px"
+          sizes="(min-width: 1100px) 500px, (min-width: 769px) and (max-width: 1099px) 400px, (max-width: 768px) 450px"
         />
       </div>
       <div className={styles.service_info}>

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import Link from "next/link";
 
-const PagesMenu = ({ styles, showMenu }) => {
+const PagesMenu = ({ styles, showMenu, closeMenu }) => {
   const menu = useRef();
 
   useEffect(() => {
@@ -17,13 +17,13 @@ const PagesMenu = ({ styles, showMenu }) => {
   return (
     <ul className={styles.pages_menu} ref={menu}>
       <li>
-        <Link href="/">Home</Link>
+        <Link href="/" onClick={closeMenu}>Home</Link>
       </li>
       <li>
-        <Link href="/services">Services</Link>
+        <Link href="/services" onClick={closeMenu}>Services</Link>
       </li>
       <li>
-        <Link href="/contact">Contact</Link>
+        <Link href="/contact" onClick={closeMenu}>Contact</Link>
       </li>
     </ul>
   );

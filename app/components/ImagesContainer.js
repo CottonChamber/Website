@@ -32,7 +32,7 @@ const ImageItem = ({ src, alt }) => {
         src={src}
         alt={alt}
         fill
-        sizes="(min-width: 1100px) 24.9%, (max-width: 1100px) 24.9%, 24.9%"
+        sizes="(min-width: 1100px) 24.9%, (min-width: 769px) and (max-width: 1099px) 24.95%, (max-width: 768px) 25%"
         draggable={false}
       />
     </div>

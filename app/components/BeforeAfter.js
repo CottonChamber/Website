@@ -9,25 +9,49 @@ const BeforeAfter = () => {
   useEffect(() => {
     document.addEventListener("mousemove", handleResize);
     document.addEventListener("mouseup", stopResize);
+    document.addEventListener("touchmove", handleResize); 
+    document.addEventListener("touchend", stopResize); 
 
     return () => {
       document.removeEventListener("mousemove", handleResize);
       document.removeEventListener("mouseup", stopResize);
+      document.removeEventListener("touchmove", handleResize);
+      document.removeEventListener("touchend", stopResize); 
     };
   }, []);
 
   const handleResize = (event) => {
+    let clientX;
+
+    if (event.touches && event.touches.length > 0) {
+      const touch = event.touches[0];
+      clientX = touch.clientX;
+    } else {
+      clientX = event.clientX;
+    }
+
     if (resizeHandleRef.current && resizeHandleRef.current.isResizing) {
       const container = beforeRef.current;
-      const newWidth = container.offsetWidth + event.movementX;
+      const newWidth = container.offsetWidth + (clientX - resizeHandleRef.current.clientX);
       container.style.width = newWidth + "px";
+      resizeHandleRef.current.clientX = clientX;
     }
   };
 
-  const startResize = () => {
-    resizeHandleRef.current.isResizing = true;
-  };
+  const startResize = (event) => {
+    let clientX;
 
+    if (event.touches && event.touches.length > 0) {
+      const touch = event.touches[0];
+      clientX = touch.clientX;
+    } else {
+      clientX = event.clientX;
+    }
+
+    resizeHandleRef.current.isResizing = true;
+    resizeHandleRef.current.clientX = clientX;
+  };
+  
   const stopResize = () => {
     resizeHandleRef.current.isResizing = false;
   };
@@ -40,6 +64,7 @@ const BeforeAfter = () => {
             <div
               className={styles.resize_button}
               onMouseDown={startResize}
+              onTouchStart={startResize}
               ref={resizeHandleRef}
             />
           </div>

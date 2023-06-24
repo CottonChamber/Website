@@ -15,7 +15,7 @@ const Header = () => {
 
       <div className={styles.container}>
         <MenuButton showMenu={showMenu} setShowMenu={setShowMenu} />
-        <PagesMenu styles={styles} showMenu={showMenu} />
+        <PagesMenu styles={styles} showMenu={showMenu} closeMenu={() => setShowMenu(false)} />
         <Logo styles={styles} />
         <SocialsMenu styles={styles} />
       </div>

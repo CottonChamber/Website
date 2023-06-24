@@ -332,8 +332,6 @@
         background-size: 700px auto;
 
         .before {
-          width: 50%;
-          height: 100%;
           min-width: 46px;
           max-width: calc(100% - 45px);
           background-position-y: -30px;
@@ -412,6 +410,417 @@
         }
         .right_button {
           right: 10px;
+        }
+      }
+    }
+  }
+}
+
+// MOBILE
+@media (max-width: 768px) {
+  .services {
+    padding: 2rem 0 4.5rem;
+
+    h1 {
+      font-size: 20px;
+      line-height: 32px;
+    }
+
+    .divider {
+      width: 100px;
+      margin: 1.5rem 0 2.5rem;
+    }
+  }
+
+  .content {
+    width: 100%;
+    max-width: 450px;
+  }
+
+  .services_list {
+    .service {
+      flex-direction: column;
+      margin-bottom: 3.5rem;
+
+      .service_image {
+        width: 100%;
+        height: 55vw;
+        max-height: 275px;
+
+        &::after,
+        &::before {
+          width: 35px;
+          height: 35px;
+        }
+
+        &::after {
+          top: -8px;
+          left: -8px;
+        }
+
+        &::before {
+          bottom: -8px;
+          right: -8px;
+        }
+      }
+
+      .service_info {
+        width: 100%;
+        padding: 0;
+        margin-top: 1.5rem;
+
+        h3 {
+          font-size: 16px;
+          margin-bottom: 0.5rem;
+        }
+
+        p {
+          font-size: 12px;
+          margin-top: 0.35rem;
+        }
+      }
+    }
+
+    .service:nth-child(even) {
+      flex-direction: column;
+
+      .service_info {
+        padding: 0;
+      }
+    }
+  }
+
+  .before_after {
+    margin: 4rem 0 3.5rem;
+
+    .slider_wrapper {
+      max-width: 450px;
+      height: 275px;
+
+      .after {
+        border-radius: 5px;
+        box-shadow: 0 7px 30px rgba(0, 0, 0, 0.045);
+        background-position-y: -25px;
+        background-size: 450px auto;
+
+        .before {
+          min-width: 38px;
+          max-width: calc(100% - 37px);
+          background-position-y: -25px;
+          background-size: 450px auto;
+
+          .resize_button {
+            right: -27px;
+            width: 52px;
+            height: 52px;
+
+            &::after {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+
+    h3 {
+      font-size: 14px;
+      margin-top: 1.5rem;
+    }
+  }
+
+  .influencers_collaborations {
+    display: flex;
+
+    .content {
+      width: 100%;
+      flex-direction: column;
+
+      .text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        h2 {
+          font-size: 20px;
+          line-height: 32px;
+          max-width: 450px;
+          text-align: center;
+        }
+
+        .divider {
+          width: 100px;
+          margin: 1.5rem 0 1.75rem;
+        }
+
+        p {
+          font-size: 12px;
+          padding-bottom: 1rem;
+          max-width: 450px;
+        }
+
+        button {
+          margin-top: 1rem;
+        }
+      }
+
+      .slider {
+        width: 100%;
+        max-width: 100%;
+        margin-top: 4.5rem;
+        overflow: hidden;
+
+        .image {
+          width: 250px;
+          height: 350px;
+          box-shadow: 0 7.5px 25px rgba(0, 0, 0, 0.1);
+
+          .name {
+            font-size: 12px;
+            bottom: 2.5rem;
+            padding: 0.75rem 1.5rem;
+          }
+        }
+
+        svg {
+          width: 26px;
+          height: 26px;
+        }
+        .left_button {
+          left: 6vw;
+        }
+        .right_button {
+          right: 6vw;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .before_after {
+    .slider_wrapper {
+      max-width: 400px;
+      height: 245px;
+
+      .after {
+        background-position-y: -25px;
+        background-size: 400px auto;
+
+        .before {
+          background-position-y: -25px;
+          background-size: 400px auto;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .before_after {
+    .slider_wrapper {
+      max-width: 350px;
+      height: 210px;
+
+      .after {
+        background-position-y: -25px;
+        background-size: 350px auto;
+
+        .before {
+          background-position-y: -25px;
+          background-size: 350px auto;
+        }
+      }
+    }
+  }
+
+  .influencers_collaborations {
+    .content {
+      .slider {
+        .image {
+          width: 225px;
+          height: 325px;
+
+          .name {
+            bottom: 2rem;
+          }
+        }
+
+        svg {
+          width: 24px;
+          height: 24px;
+        }
+        .left_button {
+          left: 5%;
+        }
+        .right_button {
+          right: 5%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .before_after {
+    .slider_wrapper {
+      max-width: 320px;
+      height: 205px;
+
+      .after {
+        background-position-y: -15px;
+        background-size: 320px auto;
+
+        .before {
+          background-position-y: -15px;
+          background-size: 320px auto;
+        }
+      }
+    }
+  }
+
+  .influencers_collaborations {
+    .content {
+      .text {
+        h2 {
+          font-size: 20px;
+          line-height: 32px;
+          max-width: 23ch;
+        }
+      }
+
+      .slider {
+        .left_button {
+          left: 2.5%;
+        }
+        .right_button {
+          right: 2.5%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 390px) {
+  .before_after {
+    .slider_wrapper {
+      max-width: 290px;
+      height: 185px;
+
+      .after {
+        background-position-y: -15px;
+        background-size: 290px auto;
+
+        .before {
+          min-width: 33px;
+          max-width: calc(100% - 32px);
+          background-position-y: -15px;
+          background-size: 290px auto;
+
+          .resize_button {
+            right: -24px;
+            width: 45px;
+            height: 45px;
+
+            &::after {
+              font-size: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .influencers_collaborations {
+    .content {
+      .slider {
+        .image {
+          width: 215px;
+          height: 315px;
+
+          .name {
+            padding: 0.65rem 1.25rem;
+          }
+        }
+
+        .left_button {
+          left: 0;
+        }
+        .right_button {
+          right: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  .before_after {
+    .slider_wrapper {
+      max-width: 260px;
+
+      .after {
+        background-position-y: -2.5px;
+        background-size: 260px auto;
+
+        .before {
+          background-position-y: -2.5px;
+          background-size: 260px auto;
+        }
+      }
+    }
+  }
+
+  .influencers_collaborations {
+    .content {
+      .slider {
+        .image {
+          width: 200px;
+          height: 275px;
+
+          .name {
+            font-size: 10px;
+            padding: 0.65rem 1.2rem;
+          }
+        }
+
+        .left_button {
+          left: -5px;
+        }
+        .right_button {
+          right: -5px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 330px) {
+  .before_after {
+    .slider_wrapper {
+      max-width: 260px;
+
+      .after {
+        background-position-y: -2.5px;
+        background-size: 260px auto;
+
+        .before {
+          background-position-y: -2.5px;
+          background-size: 260px auto;
+        }
+      }
+    }
+  }
+
+  .influencers_collaborations {
+    .content {
+      .slider {
+        .image {
+          width: 190px;
+
+          .name {
+            bottom: 1.75rem;
+          }
         }
       }
     }
