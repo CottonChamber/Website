@@ -51,6 +51,12 @@ const ContactForm = () => {
       return false;
     }
 
+    if (!isNumericString(phone_number)) {
+      alert("Please enter a valid phone number");
+      setLoading(false);
+      return false;
+    }
+
     if (!isValidEmail(email)) {
       alert("Please enter a valid email");
       setLoading(false);
@@ -113,7 +119,6 @@ const ContactForm = () => {
             name="phone_number"
             value={input.phone_number}
             handleInput={handleInput}
-            type="number"
           />
         </div>
 
@@ -175,5 +180,11 @@ const isValidEmail = (email) => {
 
   return false;
 };
+
+const isNumericString = str => {
+  const trimmedStr = str.trim();
+  const pattern = /^(\+[0-9\s]*)$|^[0-9\s]+$/;
+  return pattern.test(trimmedStr);
+}
 
 export default ContactForm;
