@@ -67,7 +67,8 @@
           padding: 1rem;
           font-size: 16px;
           font-weight: 300;
-          border-bottom: 2px solid #181818;
+          border: 2px solid #181818;
+          border-width: 0 0 2px 0;
         }
         textarea {
           resize: vertical;
