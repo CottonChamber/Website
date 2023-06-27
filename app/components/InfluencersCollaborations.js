@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "../styles/Services.module.scss";
 import Link from "next/link";
-import ImagesSlider from "./ImagesSlider";
 
 const InfluencersCollaborations = () => {
   return (
