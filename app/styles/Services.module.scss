@@ -159,101 +159,34 @@
 }
 
 .influencers_collaborations {
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+    
+  h2 {
+    font-size: 32px;
+    line-height: 44px;
+    font-weight: 700;
+    max-width: 35ch;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+  }
 
-  .content {
-    width: 100%;
-    max-width: 1000px;
-    display: flex;
-    justify-content: space-between;
+  .divider {
+    width: 150px;
+    height: 2px;
+    background-color: #181818;
+    margin: 2.25rem 0 2.5rem;
+  }
 
-    .text {
-      h2 {
-        text-align: left;
-        font-size: 32px;
-        line-height: 44px;
-        font-weight: 700;
-        max-width: 22ch;
-        font-family: "Montserrat", sans-serif;
-        text-transform: uppercase;
-      }
+  p {
+    padding-bottom: 1.5rem;
+    max-width: 52ch;
+  }
 
-      .divider {
-        width: 150px;
-        height: 2px;
-        background-color: #181818;
-        margin: 2.25rem 0 2.5rem;
-      }
-
-      p {
-        padding-bottom: 1.5rem;
-        max-width: 40ch;
-      }
-
-      button {
-        margin-top: 1.25rem;
-      }
-    }
-
-    .slider {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 485px;
-      user-select: none;
-
-      .slide {
-        display: flex;
-        align-items: center;
-        opacity: 0;
-        transition-duration: 1s ease;
-      }
-      .active_slide {
-        opacity: 1;
-        transition-duration: 0.5s;
-        transform: scale(1.08);
-      }
-
-      .image {
-        position: relative;
-        display: grid;
-        place-items: center;
-        width: 350px;
-        height: 485px;
-        box-shadow: 0 7.5px 25px rgba(0, 0, 0, 0.15);
-
-        img {
-          object-fit: cover;
-        }
-
-        .name {
-          text-align: center;
-          text-transform: uppercase;
-          font-weight: 600;
-          position: absolute;
-          bottom: 2.5rem;
-          padding: 1rem 2rem;
-          background-color: #f9f6f2;
-          box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
-        }
-      }
-
-      svg {
-        cursor: pointer;
-        position: absolute;
-        width: 32px;
-        height: 32px;
-        color: #181818;
-      }
-      .left_button {
-        left: 0;
-      }
-      .right_button {
-        right: 0;
-      }
-    }
+  button {
+    margin-top: 1.25rem;
   }
 }
 
@@ -357,61 +290,24 @@
   }
 
   .influencers_collaborations {
-    .content {
-      max-width: 800px;
-
-      .text {
-        h2 {
-          font-size: 24px;
-          line-height: 36px;
-          margin: 0;
-        }
-
-        .divider {
-          width: 125px;
-          margin: 1.75rem 0 2rem;
-        }
-
-        p {
-          padding-bottom: 1.25rem;
-          font-size: 14px;
-          max-width: 44ch;
-        }
-
-        button {
-          margin-top: 1rem;
-        }
-      }
-
-      .slider {
-        width: 400px;
-        min-width: 400px;
-        position: relative;
-        right: -2rem;
-
-        .image {
-          width: 50vw;
-          max-width: 275px;
-          height: 400px;
-
-          .name {
-            font-size: 14px;
-            bottom: 1.5rem;
-            padding: 0.85rem 1.75rem;
-          }
-        }
-
-        svg {
-          width: 26px;
-          height: 26px;
-        }
-        .left_button {
-          left: 10px;
-        }
-        .right_button {
-          right: 10px;
-        }
-      }
+    h2 {
+      font-size: 24px;
+      line-height: 36px;
+    }
+  
+    .divider {
+      width: 125px;
+      margin: 1.75rem 0 2rem;
+    }
+  
+    p {
+      padding-bottom: 1.25rem;
+      font-size: 14px;
+      max-width: 53ch;
+    }
+  
+    button {
+      margin-top: 1rem;
     }
   }
 }
@@ -529,70 +425,25 @@
   }
 
   .influencers_collaborations {
-    display: flex;
-
-    .content {
-      width: 100%;
-      flex-direction: column;
-
-      .text {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-
-        h2 {
-          font-size: 20px;
-          line-height: 32px;
-          max-width: 450px;
-          text-align: center;
-        }
-
-        .divider {
-          width: 100px;
-          margin: 1.5rem 0 1.75rem;
-        }
-
-        p {
-          font-size: 12px;
-          padding-bottom: 1rem;
-          max-width: 450px;
-        }
-
-        button {
-          margin-top: 1rem;
-        }
-      }
-
-      .slider {
-        width: 100%;
-        max-width: 100%;
-        margin-top: 4.5rem;
-        overflow: hidden;
-
-        .image {
-          width: 250px;
-          height: 350px;
-          box-shadow: 0 7.5px 25px rgba(0, 0, 0, 0.1);
-
-          .name {
-            font-size: 12px;
-            bottom: 2.5rem;
-            padding: 0.75rem 1.5rem;
-          }
-        }
-
-        svg {
-          width: 26px;
-          height: 26px;
-        }
-        .left_button {
-          left: 6vw;
-        }
-        .right_button {
-          right: 6vw;
-        }
-      }
+    h2 {
+      font-size: 20px;
+      line-height: 32px;
+      max-width: 23ch;
+    }
+  
+    .divider {
+      width: 100px;
+      margin: 1.5rem 0 1.75rem;
+    }
+  
+    p {
+      max-width: 54ch;
+      font-size: 12px;
+      padding-bottom: 1rem;
+    }
+  
+    button {
+      margin-top: 1rem;
     }
   }
 }
@@ -633,32 +484,6 @@
       }
     }
   }
-
-  .influencers_collaborations {
-    .content {
-      .slider {
-        .image {
-          width: 225px;
-          height: 325px;
-
-          .name {
-            bottom: 2rem;
-          }
-        }
-
-        svg {
-          width: 24px;
-          height: 24px;
-        }
-        .left_button {
-          left: 5%;
-        }
-        .right_button {
-          right: 5%;
-        }
-      }
-    }
-  }
 }
 
 @media (max-width: 420px) {
@@ -674,27 +499,6 @@
         .before {
           background-position-y: -15px;
           background-size: 320px auto;
-        }
-      }
-    }
-  }
-
-  .influencers_collaborations {
-    .content {
-      .text {
-        h2 {
-          font-size: 20px;
-          line-height: 32px;
-          max-width: 23ch;
-        }
-      }
-
-      .slider {
-        .left_button {
-          left: 2.5%;
-        }
-        .right_button {
-          right: 2.5%;
         }
       }
     }
@@ -730,28 +534,6 @@
       }
     }
   }
-
-  .influencers_collaborations {
-    .content {
-      .slider {
-        .image {
-          width: 215px;
-          height: 315px;
-
-          .name {
-            padding: 0.65rem 1.25rem;
-          }
-        }
-
-        .left_button {
-          left: 0;
-        }
-        .right_button {
-          right: 0;
-        }
-      }
-    }
-  }
 }
 
 @media (max-width: 360px) {
@@ -770,29 +552,6 @@
       }
     }
   }
-
-  .influencers_collaborations {
-    .content {
-      .slider {
-        .image {
-          width: 200px;
-          height: 275px;
-
-          .name {
-            font-size: 10px;
-            padding: 0.65rem 1.2rem;
-          }
-        }
-
-        .left_button {
-          left: -5px;
-        }
-        .right_button {
-          right: -5px;
-        }
-      }
-    }
-  }
 }
 
 @media (max-width: 330px) {
@@ -807,20 +566,6 @@
         .before {
           background-position-y: -2.5px;
           background-size: 260px auto;
-        }
-      }
-    }
-  }
-
-  .influencers_collaborations {
-    .content {
-      .slider {
-        .image {
-          width: 190px;
-
-          .name {
-            bottom: 1.75rem;
-          }
         }
       }
     }
