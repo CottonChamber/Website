@@ -34,7 +34,7 @@ const Socials = () => {
       <SocialsGroup
         language="Arabic"
         name="Fahad ALdeei"
-        phone="+965 9718 8324"
+        phone="+965 9670 0667"
         email="fahadcottonchamber@gmail.com"
       />
     </div>
