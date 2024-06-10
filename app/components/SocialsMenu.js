@@ -55,8 +55,8 @@ const SocialsOptions = ({ styles, option, setShowOptions }) => {
       {option === "phone" && (
         <>
           <label>Arabic</label>
-          <Link href="https://wa.me/96597188324" target="_blank">
-            +965 9718 8324
+          <Link href="https://wa.me/96596700667" target="_blank">
+            +965 9670 0667
           </Link>
           <label>English</label>
           <Link href="https://wa.me/96598529227" target="_blank">
